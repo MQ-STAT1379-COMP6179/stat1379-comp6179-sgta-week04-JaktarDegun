@@ -50,7 +50,10 @@ str(x)
 **Your observations:**
 
 - What differences do you notice between these three ways of creating vectors?
+  How you input the range of 1 to 6 can present itself as different vectors. (1,2,3/1:3)
 - Why might `typeof()` give different results?
+  Because the numbers are different vectors. They maybe the same number but they are inputted a different way
+  
 
 *Write your thoughts here:*
 
@@ -81,7 +84,9 @@ str(x)
 **Your observations:**
 
 - What happens when you mix integers and doubles in a vector?
+  It defaults into a doubles integer
 - What does the `L` suffix do?
+  Make the vectors an integer
 
 *Write your thoughts here:*
 
@@ -127,7 +132,9 @@ glue::glue("This unit is great.
 **Your task:**
 
 - Compare the different methods for combining strings
+  c(group), or [x:x] "word"
 - What's the difference between `paste()`, `cat()`, and `glue()`?
+  paste uses a separtor, cat is console without the quotes. glue is modern string interpolation
 
 *Write your analysis here:*
 
@@ -169,7 +176,9 @@ str(x)
 **Your task:**
 
 - Explain why `1 <- 1` causes an error
+  assigning a number to an R value not comparison
 - What's the difference between `=` and `==`?
+  = is for assignment aswell, == is for the equal sign
 
 *Write your explanation here:*
 
@@ -198,6 +207,7 @@ as.character(x)
 **Your analysis:**
 
 - How are factors different from character vectors?
+  Factors represent the group as categorical data instead of an unorganised mess.
 
 *Write your thoughts here:*
 
