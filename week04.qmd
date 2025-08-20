@@ -694,12 +694,14 @@ filter(babynames, name == Sea)
 **Your corrected code:**
 ```{r fix-code-student, eval=FALSE}
 # Fixed code here:
-
+filter(babynames, name == "Sea")
+filter(babynames, name == "Sea")
 
 ```
 
 **Your explanation of what was wrong:**
-
+= was used
+Sea had no ""
 
 
 ## Problem 2: Most Popular Names  
@@ -708,16 +710,20 @@ Which name was the most popular for a single gender in a single year? Compare ar
 
 ```{r popular-names-student, eval=FALSE}
 # Your code to find highest proportion:
-
+babynames |>
+  arrange(desc(prop)) |>
+  head(5)
 
 # Your code to find highest count:
-
+babynames |>
+  arrange(desc(n)) |>
+  head(5)
 
 ```
 
 **Your analysis:**
 - Are the results the same? Why or why not?
-
+John 1880 is higher prop of names while Linda 1947 has a higher count
 
 
 ## Problem 3: Popular Girls Names in 2017  
@@ -730,7 +736,10 @@ Write a pipeline that will:
 
 ```{r girls-2017-student, eval=FALSE}
 # Your pipeline here:
-
+babynames |>
+  filter(year == 2017, sex == "F") |>
+  select(name,n) |>
+  arrange(desc(n))
 
 ```
 
